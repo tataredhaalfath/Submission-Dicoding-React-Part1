@@ -136,7 +136,7 @@ export default class AppBody extends React.Component {
         <AppInput onAdd={this.onAddHandler} />
         <h2>Active Notes</h2>
         {this.state.notes.length
-        && this.state.notes.filter((note) => note.archived === false) ? (
+        && this.state.notes.filter((note) => note.archived === false).length ? (
           <AppList
             notes={this.state.notes.filter((note) => note.archived === false)}
             onDelete={this.onDeleteHandler}
